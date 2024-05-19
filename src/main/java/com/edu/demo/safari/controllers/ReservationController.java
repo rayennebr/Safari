@@ -49,9 +49,9 @@ public class ReservationController {
         return reservationService.findAllByBusIDByLanguage(busID, ln);
     }
     @GetMapping("/{userId}/{busId}/{ln}")
-    List<ReservationDto> findAllByUserIDAndBusIDByLanguage(@PathVariable UUID userID,@PathVariable UUID busID,@PathVariable String ln)
+    List<ReservationDto> findAllByUserIDAndBusIDByLanguage(@PathVariable UUID userId,@PathVariable UUID busId,@PathVariable String ln)
     {
-        return reservationService.findAllByUserIDAndBusIDByLanguage(userID, busID, ln);
+        return reservationService.findAllByUserIDAndBusIDByLanguage(userId, busId, ln);
     }
 
     @DeleteMapping("/{reservationId}")

@@ -36,7 +36,7 @@ public class FeedBackController {
         return feedBackService.findAllByUserId(userID,ln);
     }
     @GetMapping("/{busID}/{ln}")
-    List<FeedbackDto>findAllByBusId(UUID busID,String ln)
+    List<FeedbackDto>findAllByBusId(@PathVariable UUID busID,@PathVariable String ln)
     {
         return feedBackService.findAllByBusId(busID, ln);
     }
